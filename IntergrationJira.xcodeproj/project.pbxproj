@@ -7,23 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		216C64A028842BE1002A9526 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C649F28842BE1002A9526 /* NetworkManagerProtocol.swift */; };
+		216C64A228842BE9002A9526 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C64A128842BE9002A9526 /* NetworkManager.swift */; };
+		216C64A528842C58002A9526 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C64A428842C58002A9526 /* Tasks.swift */; };
+		216C64A728842C62002A9526 /* TaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C64A628842C62002A9526 /* TaskResponse.swift */; };
+		218ECAC12884314000E0A7CA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 218ECAC02884314000E0A7CA /* Moya */; };
 		218FBFFA288177D600365883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFF9288177D600365883 /* AppDelegate.swift */; };
 		218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFFB288177D600365883 /* SceneDelegate.swift */; };
-		218FBFFE288177D600365883 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFFD288177D600365883 /* ViewController.swift */; };
+		218FBFFE288177D600365883 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFFD288177D600365883 /* HomeViewController.swift */; };
 		218FC001288177D600365883 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218FBFFF288177D600365883 /* Main.storyboard */; };
 		218FC003288177D700365883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218FC002288177D700365883 /* Assets.xcassets */; };
 		218FC006288177D700365883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218FC004288177D700365883 /* LaunchScreen.storyboard */; };
+		218FC032288344F400365883 /* JiraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FC031288344F400365883 /* JiraService.swift */; };
+		3A6574C8C14846AC5700C727 /* Pods_IntergrationJira.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33A1B64B35C42038FE3AA08 /* Pods_IntergrationJira.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		216C649F28842BE1002A9526 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		216C64A128842BE9002A9526 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		216C64A428842C58002A9526 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		216C64A628842C62002A9526 /* TaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResponse.swift; sourceTree = "<group>"; };
 		218FBFF6288177D600365883 /* IntergrationJira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntergrationJira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218FBFF9288177D600365883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218FBFFB288177D600365883 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		218FBFFD288177D600365883 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		218FBFFD288177D600365883 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		218FC000288177D600365883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		218FC002288177D700365883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		218FC005288177D700365883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		218FC007288177D700365883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		218FC031288344F400365883 /* JiraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiraService.swift; sourceTree = "<group>"; };
+		4D4C4FAC77959AAD962A44D6 /* Pods-IntergrationJira.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntergrationJira.debug.xcconfig"; path = "Target Support Files/Pods-IntergrationJira/Pods-IntergrationJira.debug.xcconfig"; sourceTree = "<group>"; };
+		7FE2AB7289C901A10DFDCBD7 /* Pods-IntergrationJira.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntergrationJira.release.xcconfig"; path = "Target Support Files/Pods-IntergrationJira/Pods-IntergrationJira.release.xcconfig"; sourceTree = "<group>"; };
+		A33A1B64B35C42038FE3AA08 /* Pods_IntergrationJira.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntergrationJira.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +46,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218ECAC12884314000E0A7CA /* Moya in Frameworks */,
+				3A6574C8C14846AC5700C727 /* Pods_IntergrationJira.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		216C64A328842C3A002A9526 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				216C64A428842C58002A9526 /* Tasks.swift */,
+				216C64A628842C62002A9526 /* TaskResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		216C64A828842C7B002A9526 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				218FC031288344F400365883 /* JiraService.swift */,
+				216C64A128842BE9002A9526 /* NetworkManager.swift */,
+				216C649F28842BE1002A9526 /* NetworkManagerProtocol.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		218FBFED288177D600365883 = {
 			isa = PBXGroup;
 			children = (
 				218FBFF8288177D600365883 /* IntergrationJira */,
 				218FBFF7288177D600365883 /* Products */,
+				9244CD98117B389CD1971C25 /* Pods */,
+				AE8507D99F04FE4E299388DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +94,82 @@
 		218FBFF8288177D600365883 /* IntergrationJira */ = {
 			isa = PBXGroup;
 			children = (
-				218FBFF9288177D600365883 /* AppDelegate.swift */,
-				218FBFFB288177D600365883 /* SceneDelegate.swift */,
-				218FBFFD288177D600365883 /* ViewController.swift */,
-				218FBFFF288177D600365883 /* Main.storyboard */,
-				218FC002288177D700365883 /* Assets.xcassets */,
-				218FC004288177D700365883 /* LaunchScreen.storyboard */,
+				218FC00F2883122900365883 /* App */,
+				218FC00D2883121D00365883 /* Presentation */,
+				218FC00E2883122300365883 /* Data */,
+				218FC0102883122C00365883 /* Resource */,
 				218FC007288177D700365883 /* Info.plist */,
 			);
 			path = IntergrationJira;
+			sourceTree = "<group>";
+		};
+		218FC00D2883121D00365883 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				218FC0112883124000365883 /* Storyboards */,
+				218FC0122883125F00365883 /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		218FC00E2883122300365883 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				216C64A828842C7B002A9526 /* Main */,
+				216C64A328842C3A002A9526 /* Entities */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		218FC00F2883122900365883 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				218FBFF9288177D600365883 /* AppDelegate.swift */,
+				218FBFFB288177D600365883 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		218FC0102883122C00365883 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				218FC002288177D700365883 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		218FC0112883124000365883 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				218FC004288177D700365883 /* LaunchScreen.storyboard */,
+				218FBFFF288177D600365883 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		218FC0122883125F00365883 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				218FBFFD288177D600365883 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9244CD98117B389CD1971C25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D4C4FAC77959AAD962A44D6 /* Pods-IntergrationJira.debug.xcconfig */,
+				7FE2AB7289C901A10DFDCBD7 /* Pods-IntergrationJira.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AE8507D99F04FE4E299388DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A33A1B64B35C42038FE3AA08 /* Pods_IntergrationJira.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +179,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 218FC00A288177D700365883 /* Build configuration list for PBXNativeTarget "IntergrationJira" */;
 			buildPhases = (
+				FA7767A2774743BC60E68038 /* [CP] Check Pods Manifest.lock */,
 				218FBFF2288177D600365883 /* Sources */,
 				218FBFF3288177D600365883 /* Frameworks */,
 				218FBFF4288177D600365883 /* Resources */,
+				65960D44C8F5CF2E01D34741 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = IntergrationJira;
+			packageProductDependencies = (
+				218ECAC02884314000E0A7CA /* Moya */,
+			);
 			productName = IntergrationJira;
 			productReference = 218FBFF6288177D600365883 /* IntergrationJira.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +221,9 @@
 				Base,
 			);
 			mainGroup = 218FBFED288177D600365883;
+			packageReferences = (
+				218ECABF2884314000E0A7CA /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 218FBFF7288177D600365883 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,14 +246,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65960D44C8F5CF2E01D34741 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IntergrationJira/Pods-IntergrationJira-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IntergrationJira/Pods-IntergrationJira-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IntergrationJira/Pods-IntergrationJira-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA7767A2774743BC60E68038 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IntergrationJira-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		218FBFF2288177D600365883 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				218FBFFE288177D600365883 /* ViewController.swift in Sources */,
+				216C64A528842C58002A9526 /* Tasks.swift in Sources */,
+				216C64A228842BE9002A9526 /* NetworkManager.swift in Sources */,
+				218FBFFE288177D600365883 /* HomeViewController.swift in Sources */,
 				218FBFFA288177D600365883 /* AppDelegate.swift in Sources */,
 				218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */,
+				216C64A028842BE1002A9526 /* NetworkManagerProtocol.swift in Sources */,
+				218FC032288344F400365883 /* JiraService.swift in Sources */,
+				216C64A728842C62002A9526 /* TaskResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +442,7 @@
 		};
 		218FC00B288177D700365883 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D4C4FAC77959AAD962A44D6 /* Pods-IntergrationJira.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +471,7 @@
 		};
 		218FC00C288177D700365883 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE2AB7289C901A10DFDCBD7 /* Pods-IntergrationJira.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +520,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		218ECABF2884314000E0A7CA /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		218ECAC02884314000E0A7CA /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 218ECABF2884314000E0A7CA /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 218FBFEE288177D600365883 /* Project object */;
 }

@@ -1,0 +1,16 @@
+PODS:
+  - Wormholy (1.6.5)
+
+DEPENDENCIES:
+  - Wormholy
+
+SPEC REPOS:
+  trunk:
+    - Wormholy
+
+SPEC CHECKSUMS:
+  Wormholy: 3252bc3e55a1847ef9a0976c1377bd77bf3635fa
+
+PODFILE CHECKSUM: 52c2b864267718751a48a62ab6304a6e10306070
+
+COCOAPODS: 1.11.2
