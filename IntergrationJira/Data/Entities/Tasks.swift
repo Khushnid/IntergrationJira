@@ -12,7 +12,6 @@ struct Tasks: Codable {
     let issues: [Issue]
 }
 
-// MARK: - Issue
 struct Issue: Codable {
     let id: String
     let issueSelf: String
@@ -25,8 +24,16 @@ struct Issue: Codable {
     }
 }
 
-// MARK: - Fields
 struct IssueFields: Codable {
     let created: String
     let summary: String
+    let description: Description
+}
+
+struct Description: Codable {
+    let content: [ContentContent]
+}
+
+struct ContentContent: Codable {
+    let text: String
 }

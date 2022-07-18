@@ -10,13 +10,17 @@ import Moya
 
 enum JiraService {
     case fetchTasks
-    case postTask
+    case postTask(summary: String, description: String)
 }
 
 extension JiraService: TargetType {
     
     var baseURL: URL {
         URL(string: "https://khushnidjon.atlassian.net/")!
+    }
+    
+    var authorizationType: AuthorizationType {
+        return .basic
     }
     
     var path: String {

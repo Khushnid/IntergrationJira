@@ -5,24 +5,35 @@
 //  Created by Khushnid Ch on 17/07/22.
 //
 
+import Foundation
 import Moya
-import UIKit
 
 class NetworkManager: Networkable {
     
-    var provider = MoyaProvider<JiraService>(plugins: [CredentialsPlugin { _ -> URLCredential? in
-        let user = "xushnudbek321@gmail.com"
-        let password = "smW3YjPvVtLzf9ZAQbFF7F6F"
-        
-        return URLCredential(user: user, password: password, persistence: .permanent)
-    }])
+    var provider = MoyaProvider<JiraService>(plugins: [AuthProvider.basicAuthPlugin])
     
     func fetchTasks(completion: @escaping (Result<Tasks, Error>) -> ()) {
         request(target: .fetchTasks, completion: completion)
     }
     
-    func postTask(completion: @escaping (Result<TaskResponse, Error>) -> ()) {
-        request(target: .postTask, completion: completion)
+    func postTask(summary: String, description: String, completion: @escaping (Result<TaskResponse, Error>) -> ()) {
+        request(target: .postTask(summary: summary, description: description), completion: completion)
+    }
+    
+    init(provider: MoyaProvider<JiraService>) {
+        self.provider = provider
+    }
+    
+    convenience init(){
+        let networkActivityClosure: NetworkActivityPlugin.NetworkActivityClosure = {_,_ in}
+        let networkActivityPlugin = NetworkActivityPlugin(networkActivityClosure: networkActivityClosure)
+        let networkLogger = NetworkLoggerPlugin()
+        var plugins : [PluginType] = []
+        let provider = MoyaProvider<JiraService>(plugins: plugins)
+        
+        plugins.append(networkActivityPlugin)
+        plugins.append(networkLogger)
+        self.init(provider: provider)
     }
 }
 

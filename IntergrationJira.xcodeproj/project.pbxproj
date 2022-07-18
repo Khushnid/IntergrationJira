@@ -12,6 +12,8 @@
 		216C64A528842C58002A9526 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C64A428842C58002A9526 /* Tasks.swift */; };
 		216C64A728842C62002A9526 /* TaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C64A628842C62002A9526 /* TaskResponse.swift */; };
 		218ECAC12884314000E0A7CA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 218ECAC02884314000E0A7CA /* Moya */; };
+		218ECAC528843D0F00E0A7CA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218ECAC428843D0F00E0A7CA /* HomeViewModel.swift */; };
+		218ECAC7288447D400E0A7CA /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218ECAC6288447D400E0A7CA /* AuthProvider.swift */; };
 		218FBFFA288177D600365883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFF9288177D600365883 /* AppDelegate.swift */; };
 		218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFFB288177D600365883 /* SceneDelegate.swift */; };
 		218FBFFE288177D600365883 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFFD288177D600365883 /* HomeViewController.swift */; };
@@ -27,6 +29,8 @@
 		216C64A128842BE9002A9526 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		216C64A428842C58002A9526 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		216C64A628842C62002A9526 /* TaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResponse.swift; sourceTree = "<group>"; };
+		218ECAC428843D0F00E0A7CA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		218ECAC6288447D400E0A7CA /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		218FBFF6288177D600365883 /* IntergrationJira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntergrationJira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218FBFF9288177D600365883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218FBFFB288177D600365883 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 				218FC031288344F400365883 /* JiraService.swift */,
 				216C64A128842BE9002A9526 /* NetworkManager.swift */,
 				216C649F28842BE1002A9526 /* NetworkManagerProtocol.swift */,
+				218ECAC6288447D400E0A7CA /* AuthProvider.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				218FBFFD288177D600365883 /* HomeViewController.swift */,
+				218ECAC428843D0F00E0A7CA /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 			files = (
 				216C64A528842C58002A9526 /* Tasks.swift in Sources */,
 				216C64A228842BE9002A9526 /* NetworkManager.swift in Sources */,
+				218ECAC7288447D400E0A7CA /* AuthProvider.swift in Sources */,
 				218FBFFE288177D600365883 /* HomeViewController.swift in Sources */,
+				218ECAC528843D0F00E0A7CA /* HomeViewModel.swift in Sources */,
 				218FBFFA288177D600365883 /* AppDelegate.swift in Sources */,
 				218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */,
 				216C64A028842BE1002A9526 /* NetworkManagerProtocol.swift in Sources */,
