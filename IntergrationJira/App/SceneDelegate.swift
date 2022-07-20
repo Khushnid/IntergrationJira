@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  IntergrationJira
-//
-//  Created by Khushnid Ch on 15/07/22.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

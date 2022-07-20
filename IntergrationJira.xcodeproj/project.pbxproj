@@ -7,39 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		216C64A028842BE1002A9526 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C649F28842BE1002A9526 /* NetworkManagerProtocol.swift */; };
-		216C64A228842BE9002A9526 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C64A128842BE9002A9526 /* NetworkManager.swift */; };
-		216C64A528842C58002A9526 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C64A428842C58002A9526 /* Tasks.swift */; };
-		216C64A728842C62002A9526 /* TaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C64A628842C62002A9526 /* TaskResponse.swift */; };
-		218ECAC12884314000E0A7CA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 218ECAC02884314000E0A7CA /* Moya */; };
-		218ECAC528843D0F00E0A7CA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218ECAC428843D0F00E0A7CA /* HomeViewModel.swift */; };
-		218ECAC7288447D400E0A7CA /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218ECAC6288447D400E0A7CA /* AuthProvider.swift */; };
+		218ECAC528843D0F00E0A7CA /* JiraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */; };
 		218FBFFA288177D600365883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFF9288177D600365883 /* AppDelegate.swift */; };
 		218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFFB288177D600365883 /* SceneDelegate.swift */; };
-		218FBFFE288177D600365883 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFFD288177D600365883 /* HomeViewController.swift */; };
+		218FBFFE288177D600365883 /* JiraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFFD288177D600365883 /* JiraController.swift */; };
 		218FC001288177D600365883 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218FBFFF288177D600365883 /* Main.storyboard */; };
 		218FC003288177D700365883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218FC002288177D700365883 /* Assets.xcassets */; };
 		218FC006288177D700365883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218FC004288177D700365883 /* LaunchScreen.storyboard */; };
-		218FC032288344F400365883 /* JiraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FC031288344F400365883 /* JiraService.swift */; };
+		21B370C32887DA2A00A72B40 /* AtlassianHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 21B370C22887DA2A00A72B40 /* AtlassianHelper */; };
+		21B370C92888799100A72B40 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B370C82888799100A72B40 /* IntroViewController.swift */; };
+		21B370CD28887CD200A72B40 /* TrelloUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B370CC28887CD200A72B40 /* TrelloUserController.swift */; };
+		21B370CF28887CE300A72B40 /* JiraUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B370CE28887CE300A72B40 /* JiraUserController.swift */; };
+		21B370D328887D2500A72B40 /* TrelloController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B370D228887D2500A72B40 /* TrelloController.swift */; };
 		3A6574C8C14846AC5700C727 /* Pods_IntergrationJira.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33A1B64B35C42038FE3AA08 /* Pods_IntergrationJira.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		216C649F28842BE1002A9526 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
-		216C64A128842BE9002A9526 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		216C64A428842C58002A9526 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
-		216C64A628842C62002A9526 /* TaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResponse.swift; sourceTree = "<group>"; };
-		218ECAC428843D0F00E0A7CA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		218ECAC6288447D400E0A7CA /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiraViewModel.swift; sourceTree = "<group>"; };
 		218FBFF6288177D600365883 /* IntergrationJira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntergrationJira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218FBFF9288177D600365883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218FBFFB288177D600365883 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		218FBFFD288177D600365883 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		218FBFFD288177D600365883 /* JiraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiraController.swift; sourceTree = "<group>"; };
 		218FC000288177D600365883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		218FC002288177D700365883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		218FC005288177D700365883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		218FC007288177D700365883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		218FC031288344F400365883 /* JiraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiraService.swift; sourceTree = "<group>"; };
+		21B370C82888799100A72B40 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		21B370CC28887CD200A72B40 /* TrelloUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrelloUserController.swift; sourceTree = "<group>"; };
+		21B370CE28887CE300A72B40 /* JiraUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiraUserController.swift; sourceTree = "<group>"; };
+		21B370D228887D2500A72B40 /* TrelloController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrelloController.swift; sourceTree = "<group>"; };
 		4D4C4FAC77959AAD962A44D6 /* Pods-IntergrationJira.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntergrationJira.debug.xcconfig"; path = "Target Support Files/Pods-IntergrationJira/Pods-IntergrationJira.debug.xcconfig"; sourceTree = "<group>"; };
 		7FE2AB7289C901A10DFDCBD7 /* Pods-IntergrationJira.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntergrationJira.release.xcconfig"; path = "Target Support Files/Pods-IntergrationJira/Pods-IntergrationJira.release.xcconfig"; sourceTree = "<group>"; };
 		A33A1B64B35C42038FE3AA08 /* Pods_IntergrationJira.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntergrationJira.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,34 +46,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				218ECAC12884314000E0A7CA /* Moya in Frameworks */,
 				3A6574C8C14846AC5700C727 /* Pods_IntergrationJira.framework in Frameworks */,
+				21B370C32887DA2A00A72B40 /* AtlassianHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		216C64A328842C3A002A9526 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				216C64A428842C58002A9526 /* Tasks.swift */,
-				216C64A628842C62002A9526 /* TaskResponse.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		216C64A828842C7B002A9526 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				218FC031288344F400365883 /* JiraService.swift */,
-				216C64A128842BE9002A9526 /* NetworkManager.swift */,
-				216C649F28842BE1002A9526 /* NetworkManagerProtocol.swift */,
-				218ECAC6288447D400E0A7CA /* AuthProvider.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		218FBFED288177D600365883 = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +77,6 @@
 			children = (
 				218FC00F2883122900365883 /* App */,
 				218FC00D2883121D00365883 /* Presentation */,
-				218FC00E2883122300365883 /* Data */,
 				218FC0102883122C00365883 /* Resource */,
 				218FC007288177D700365883 /* Info.plist */,
 			);
@@ -111,19 +86,12 @@
 		218FC00D2883121D00365883 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				218FC0112883124000365883 /* Storyboards */,
-				218FC0122883125F00365883 /* Home */,
+				218FBFFF288177D600365883 /* Main.storyboard */,
+				21B370C72888797A00A72B40 /* Intro */,
+				21B370CA28887C8800A72B40 /* Jira */,
+				21B370CB28887C9400A72B40 /* Trello */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		218FC00E2883122300365883 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				216C64A828842C7B002A9526 /* Main */,
-				216C64A328842C3A002A9526 /* Entities */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		218FC00F2883122900365883 /* App */ = {
@@ -138,27 +106,37 @@
 		218FC0102883122C00365883 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				218FC004288177D700365883 /* LaunchScreen.storyboard */,
 				218FC002288177D700365883 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		218FC0112883124000365883 /* Storyboards */ = {
+		21B370C72888797A00A72B40 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
-				218FC004288177D700365883 /* LaunchScreen.storyboard */,
-				218FBFFF288177D600365883 /* Main.storyboard */,
+				21B370C82888799100A72B40 /* IntroViewController.swift */,
 			);
-			path = Storyboards;
+			path = Intro;
 			sourceTree = "<group>";
 		};
-		218FC0122883125F00365883 /* Home */ = {
+		21B370CA28887C8800A72B40 /* Jira */ = {
 			isa = PBXGroup;
 			children = (
-				218FBFFD288177D600365883 /* HomeViewController.swift */,
-				218ECAC428843D0F00E0A7CA /* HomeViewModel.swift */,
+				21B370CE28887CE300A72B40 /* JiraUserController.swift */,
+				218FBFFD288177D600365883 /* JiraController.swift */,
+				218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */,
 			);
-			path = Home;
+			path = Jira;
+			sourceTree = "<group>";
+		};
+		21B370CB28887C9400A72B40 /* Trello */ = {
+			isa = PBXGroup;
+			children = (
+				21B370CC28887CD200A72B40 /* TrelloUserController.swift */,
+				21B370D228887D2500A72B40 /* TrelloController.swift */,
+			);
+			path = Trello;
 			sourceTree = "<group>";
 		};
 		9244CD98117B389CD1971C25 /* Pods */ = {
@@ -197,7 +175,7 @@
 			);
 			name = IntergrationJira;
 			packageProductDependencies = (
-				218ECAC02884314000E0A7CA /* Moya */,
+				21B370C22887DA2A00A72B40 /* AtlassianHelper */,
 			);
 			productName = IntergrationJira;
 			productReference = 218FBFF6288177D600365883 /* IntergrationJira.app */;
@@ -228,7 +206,7 @@
 			);
 			mainGroup = 218FBFED288177D600365883;
 			packageReferences = (
-				218ECABF2884314000E0A7CA /* XCRemoteSwiftPackageReference "Moya" */,
+				21B370C12887DA2A00A72B40 /* XCRemoteSwiftPackageReference "AtlassianHelper" */,
 			);
 			productRefGroup = 218FBFF7288177D600365883 /* Products */;
 			projectDirPath = "";
@@ -299,16 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216C64A528842C58002A9526 /* Tasks.swift in Sources */,
-				216C64A228842BE9002A9526 /* NetworkManager.swift in Sources */,
-				218ECAC7288447D400E0A7CA /* AuthProvider.swift in Sources */,
-				218FBFFE288177D600365883 /* HomeViewController.swift in Sources */,
-				218ECAC528843D0F00E0A7CA /* HomeViewModel.swift in Sources */,
+				21B370CD28887CD200A72B40 /* TrelloUserController.swift in Sources */,
+				21B370C92888799100A72B40 /* IntroViewController.swift in Sources */,
+				218FBFFE288177D600365883 /* JiraController.swift in Sources */,
+				21B370CF28887CE300A72B40 /* JiraUserController.swift in Sources */,
+				218ECAC528843D0F00E0A7CA /* JiraViewModel.swift in Sources */,
 				218FBFFA288177D600365883 /* AppDelegate.swift in Sources */,
 				218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */,
-				216C64A028842BE1002A9526 /* NetworkManagerProtocol.swift in Sources */,
-				218FC032288344F400365883 /* JiraService.swift in Sources */,
-				216C64A728842C62002A9526 /* TaskResponse.swift in Sources */,
+				21B370D328887D2500A72B40 /* TrelloController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -438,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -464,6 +440,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,7 +450,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -493,6 +470,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,7 +480,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -530,21 +508,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		218ECABF2884314000E0A7CA /* XCRemoteSwiftPackageReference "Moya" */ = {
+		21B370C12887DA2A00A72B40 /* XCRemoteSwiftPackageReference "AtlassianHelper" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
+			repositoryURL = "https://github.com/Khushnid/AtlassianHelper";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.0;
+				branch = JiraAddTask;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		218ECAC02884314000E0A7CA /* Moya */ = {
+		21B370C22887DA2A00A72B40 /* AtlassianHelper */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 218ECABF2884314000E0A7CA /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
+			package = 21B370C12887DA2A00A72B40 /* XCRemoteSwiftPackageReference "AtlassianHelper" */;
+			productName = AtlassianHelper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

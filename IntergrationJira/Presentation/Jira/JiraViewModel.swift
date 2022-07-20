@@ -1,33 +1,26 @@
-//
-//  HomeViewModel.swift
-//  IntergrationJira
-//
-//  Created by Khushnid Ch on 17/07/22.
-//
-
 import Foundation
+import AtlassianHelper
 
-protocol HomeViewModelProtocol: AnyObject {
+protocol JiraViewModelProtocol: AnyObject {
     func didUpdateHomePage()
     func didAddNewTask()
 }
 
-class HomeViewModel {
-    weak var delegate: HomeViewModelProtocol?
-    private let networkManager: NetworkManager
+class JiraViewModel {
+    weak var delegate: JiraViewModelProtocol?
+    fileprivate(set) var tasks: [JiraIssue] = []
     
-    fileprivate(set) var tasks: [Issue] = []
-    
-    init(networkManager: NetworkManager = NetworkManager()) {
-        self.networkManager = networkManager
-    }
-    
+    let networkManager = DefaultJiraManager(user: "xushnudbek321@gmail.com",
+                                            password: "smW3YjPvVtLzf9ZAQbFF7F6F",
+                                            url: "https://khushnidjon.atlassian.net",
+                                            projectKey: "PPOKERMAIN")
+
     func fetchHomePage() {
         networkManager.fetchTasks { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                self.tasks = response.issues
+                self.tasks = response.issues ?? []
                 self.delegate?.didUpdateHomePage()
             case .failure(let error):
                 print(error.localizedDescription)
