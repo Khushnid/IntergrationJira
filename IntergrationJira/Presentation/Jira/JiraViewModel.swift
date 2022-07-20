@@ -7,14 +7,19 @@ protocol JiraViewModelProtocol: AnyObject {
 }
 
 class JiraViewModel {
+    var userValues: (user: String, password: String, url: String, key: String)
     weak var delegate: JiraViewModelProtocol?
     fileprivate(set) var tasks: [JiraIssue] = []
     
-    let networkManager = DefaultJiraManager(user: "xushnudbek321@gmail.com",
-                                            password: "smW3YjPvVtLzf9ZAQbFF7F6F",
-                                            url: "https://khushnidjon.atlassian.net",
-                                            projectKey: "PPOKERMAIN")
-
+    init(userValues: (user: String, password: String, url: String, key: String)) {
+        self.userValues = userValues
+    }
+    
+    lazy var networkManager = DefaultJiraManager(user: userValues.user,
+                                                 password: userValues.password,
+                                                 url: userValues.url,
+                                                 projectKey: userValues.key)
+    
     func fetchHomePage() {
         networkManager.fetchTasks { [weak self] result in
             guard let self = self else { return }
@@ -29,7 +34,7 @@ class JiraViewModel {
     }
     
     func addNewTask(summary: String, description: String) {
-        networkManager.postTask(summary: summary, description: description) { [weak self] result in
+        networkManager.postTask(projectKey: userValues.key, summary: summary, description: description) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):

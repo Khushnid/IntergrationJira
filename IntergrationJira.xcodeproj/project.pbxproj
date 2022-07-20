@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2161135D28888FA300D9D56D /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161135C28888FA300D9D56D /* String+Helpers.swift */; };
 		218ECAC528843D0F00E0A7CA /* JiraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */; };
 		218FBFFA288177D600365883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFF9288177D600365883 /* AppDelegate.swift */; };
 		218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFFB288177D600365883 /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2161135C28888FA300D9D56D /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiraViewModel.swift; sourceTree = "<group>"; };
 		218FBFF6288177D600365883 /* IntergrationJira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntergrationJira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218FBFF9288177D600365883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2161135B28888F9500D9D56D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2161135C28888FA300D9D56D /* String+Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		218FBFED288177D600365883 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		218FC0102883122C00365883 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				2161135B28888F9500D9D56D /* Helpers */,
 				218FC004288177D700365883 /* LaunchScreen.storyboard */,
 				218FC002288177D700365883 /* Assets.xcassets */,
 			);
@@ -282,6 +293,7 @@
 				218FBFFE288177D600365883 /* JiraController.swift in Sources */,
 				21B370CF28887CE300A72B40 /* JiraUserController.swift in Sources */,
 				218ECAC528843D0F00E0A7CA /* JiraViewModel.swift in Sources */,
+				2161135D28888FA300D9D56D /* String+Helpers.swift in Sources */,
 				218FBFFA288177D600365883 /* AppDelegate.swift in Sources */,
 				218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */,
 				21B370D328887D2500A72B40 /* TrelloController.swift in Sources */,
@@ -512,7 +524,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Khushnid/AtlassianHelper";
 			requirement = {
-				branch = JiraAddTask;
+				branch = main;
 				kind = branch;
 			};
 		};

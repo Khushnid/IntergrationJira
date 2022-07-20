@@ -3,8 +3,9 @@ import UIKit
 class JiraController: UIViewController {
     @IBOutlet weak var tasksTable: UITableView!
     let refreshControl = UIRefreshControl()
-
-    private var viewModel = JiraViewModel()
+    
+    var userValues: (user: String, password: String, url: String, key: String) = ("", "", "", "")
+    private lazy var viewModel = JiraViewModel(userValues: userValues)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +16,6 @@ class JiraController: UIViewController {
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tasksTable.addSubview(refreshControl)
     }
-    
 }
 
 extension JiraController: UITableViewDelegate, UITableViewDataSource {

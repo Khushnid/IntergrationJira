@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Khushnid/AtlassianHelper",
       "state" : {
-        "branch" : "JiraAddTask",
-        "revision" : "f47d4fca51cac2fe334117ba833ef49deda0f309"
+        "branch" : "main",
+        "revision" : "2d28d6c1f45e0cc71e85e23b868655242d7c09d9"
       }
     },
     {
