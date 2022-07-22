@@ -3,9 +3,9 @@ import UIKit
 class TrelloController: UIViewController {
     @IBOutlet weak var tasksTable: UITableView!
     
-    var userValues: (key: String, token: String) = ("", "")
     private lazy var viewModel = TrelloViewModel(userValues: userValues)
-    var shouldFetchLists: Bool = true
+    var userValues: (key: String, token: String) = ("", "")
+    var state: TrelloBoardState = .boards
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,19 +27,32 @@ extension TrelloController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        title = viewModel.data[indexPath.row].name
-    
-        if shouldFetchLists {
-            viewModel.trelloData.boardID = viewModel.data[indexPath.row].id ?? ""
-            reloadList()
-            viewModel.fetchLists()
-        } else {
-            viewModel.trelloData.listID = viewModel.data[indexPath.row].id ?? ""
-            reloadList()
-            viewModel.fetchCards()
+        if state != .cards {
+            title = viewModel.data[indexPath.row].name
         }
-        
-        shouldFetchLists = false
+      
+        switch state {
+        case .boards:
+            if let boardID = viewModel.data[indexPath.row].id {
+                state = .lists
+                viewModel.trelloData.boardID = boardID
+                viewModel.fetchLists()
+                reloadList()
+            }
+        case .lists:
+            if let listID = viewModel.data[indexPath.row].id {
+                state = .cards
+                viewModel.trelloData.listID = listID
+                viewModel.fetchCards()
+                reloadList()
+            }
+        case .cards:
+            if let cardURL = viewModel.data[indexPath.row].url {
+                if let url = URL(string: cardURL), UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                }
+            }
+        }
     }
     
     private func reloadList() {
@@ -47,7 +60,6 @@ extension TrelloController: UITableViewDelegate, UITableViewDataSource {
         tasksTable.reloadData()
     }
 }
-
 
 extension TrelloController: TrelloViewModelProtocol {
     func didUpdatePage() {

@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		210965EF288ADC2700887D04 /* TrelloViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210965EE288ADC2700887D04 /* TrelloViewModel.swift */; };
-		210965F4288AF53E00887D04 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210965F3288AF53E00887D04 /* DropDown.swift */; };
-		210965F8288AF59B00887D04 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210965F6288AF59B00887D04 /* NiblessView.swift */; };
-		210965F9288AF59B00887D04 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210965F7288AF59B00887D04 /* RootView.swift */; };
 		21096602288B14EF00887D04 /* TrelloBoardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21096601288B14EF00887D04 /* TrelloBoardState.swift */; };
 		2161135D28888FA300D9D56D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161135C28888FA300D9D56D /* String+Extensions.swift */; };
 		218ECAC528843D0F00E0A7CA /* JiraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */; };
@@ -30,9 +27,6 @@
 
 /* Begin PBXFileReference section */
 		210965EE288ADC2700887D04 /* TrelloViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrelloViewModel.swift; sourceTree = "<group>"; };
-		210965F3288AF53E00887D04 /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
-		210965F6288AF59B00887D04 /* NiblessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
-		210965F7288AF59B00887D04 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		21096601288B14EF00887D04 /* TrelloBoardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrelloBoardState.swift; sourceTree = "<group>"; };
 		2161135C28888FA300D9D56D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiraViewModel.swift; sourceTree = "<group>"; };
@@ -83,15 +77,6 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		210965F5288AF59B00887D04 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				210965F6288AF59B00887D04 /* NiblessView.swift */,
-				210965F7288AF59B00887D04 /* RootView.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		21096600288B143A00887D04 /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,13 +85,39 @@
 			path = State;
 			sourceTree = "<group>";
 		};
-		2161135B28888F9500D9D56D /* Helpers */ = {
+		21096603288B16F900887D04 /* JiraUser */ = {
 			isa = PBXGroup;
 			children = (
-				210965F5288AF59B00887D04 /* Core */,
-				210965F3288AF53E00887D04 /* DropDown.swift */,
+				21B370CE28887CE300A72B40 /* JiraUserController.swift */,
 			);
-			path = Helpers;
+			path = JiraUser;
+			sourceTree = "<group>";
+		};
+		21096604288B170200887D04 /* JiraMain */ = {
+			isa = PBXGroup;
+			children = (
+				218FBFFD288177D600365883 /* JiraController.swift */,
+				218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */,
+			);
+			path = JiraMain;
+			sourceTree = "<group>";
+		};
+		21096606288B172300887D04 /* TrelloMain */ = {
+			isa = PBXGroup;
+			children = (
+				21096600288B143A00887D04 /* State */,
+				21B370D228887D2500A72B40 /* TrelloController.swift */,
+				210965EE288ADC2700887D04 /* TrelloViewModel.swift */,
+			);
+			path = TrelloMain;
+			sourceTree = "<group>";
+		};
+		21096609288B172300887D04 /* TrelloUser */ = {
+			isa = PBXGroup;
+			children = (
+				21B370CC28887CD200A72B40 /* TrelloUserController.swift */,
+			);
+			path = TrelloUser;
 			sourceTree = "<group>";
 		};
 		218FBFED288177D600365883 = {
@@ -162,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				210965F2288AF52D00887D04 /* Main */,
-				2161135B28888F9500D9D56D /* Helpers */,
 				210965F0288AF50700887D04 /* Extensions */,
 			);
 			path = Resource;
@@ -179,9 +189,8 @@
 		21B370CA28887C8800A72B40 /* Jira */ = {
 			isa = PBXGroup;
 			children = (
-				21B370CE28887CE300A72B40 /* JiraUserController.swift */,
-				218FBFFD288177D600365883 /* JiraController.swift */,
-				218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */,
+				21096604288B170200887D04 /* JiraMain */,
+				21096603288B16F900887D04 /* JiraUser */,
 			);
 			path = Jira;
 			sourceTree = "<group>";
@@ -189,10 +198,8 @@
 		21B370CB28887C9400A72B40 /* Trello */ = {
 			isa = PBXGroup;
 			children = (
-				21096600288B143A00887D04 /* State */,
-				21B370CC28887CD200A72B40 /* TrelloUserController.swift */,
-				21B370D228887D2500A72B40 /* TrelloController.swift */,
-				210965EE288ADC2700887D04 /* TrelloViewModel.swift */,
+				21096606288B172300887D04 /* TrelloMain */,
+				21096609288B172300887D04 /* TrelloUser */,
 			);
 			path = Trello;
 			sourceTree = "<group>";
@@ -338,15 +345,12 @@
 				21B370CD28887CD200A72B40 /* TrelloUserController.swift in Sources */,
 				21B370C92888799100A72B40 /* IntroViewController.swift in Sources */,
 				218FBFFE288177D600365883 /* JiraController.swift in Sources */,
-				210965F8288AF59B00887D04 /* NiblessView.swift in Sources */,
 				21B370CF28887CE300A72B40 /* JiraUserController.swift in Sources */,
 				218ECAC528843D0F00E0A7CA /* JiraViewModel.swift in Sources */,
 				2161135D28888FA300D9D56D /* String+Extensions.swift in Sources */,
 				218FBFFA288177D600365883 /* AppDelegate.swift in Sources */,
 				218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */,
-				210965F9288AF59B00887D04 /* RootView.swift in Sources */,
 				210965EF288ADC2700887D04 /* TrelloViewModel.swift in Sources */,
-				210965F4288AF53E00887D04 /* DropDown.swift in Sources */,
 				21096602288B14EF00887D04 /* TrelloBoardState.swift in Sources */,
 				21B370D328887D2500A72B40 /* TrelloController.swift in Sources */,
 			);
