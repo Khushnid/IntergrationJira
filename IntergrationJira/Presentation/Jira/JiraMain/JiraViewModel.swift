@@ -18,7 +18,9 @@ class JiraViewModel {
                                                  password: userValues.password,
                                                  url: userValues.url,
                                                  projectKey: userValues.key)
-    
+}
+
+extension JiraViewModel {
     func fetchHomePage() {
         networkManager.fetchTasks { [weak self] result in
             guard let self = self else { return }
