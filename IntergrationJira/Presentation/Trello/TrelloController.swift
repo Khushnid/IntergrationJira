@@ -2,43 +2,55 @@ import UIKit
 
 class TrelloController: UIViewController {
     @IBOutlet weak var tasksTable: UITableView!
-    let refreshControl = UIRefreshControl()
     
     var userValues: (key: String, token: String) = ("", "")
     private lazy var viewModel = TrelloViewModel(userValues: userValues)
+    var shouldFetchLists: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         viewModel.delegate = self
-        
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        tasksTable.addSubview(refreshControl)
+        viewModel.fetchBoards()
     }
 }
 
 extension TrelloController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return viewModel.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") else { return UITableViewCell()}
-        cell.textLabel?.text = "Random One"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TrelloCell") else { return UITableViewCell() }
+        cell.textLabel?.text = viewModel.data[indexPath.row].name
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        title = viewModel.data[indexPath.row].name
+    
+        if shouldFetchLists {
+            viewModel.trelloData.boardID = viewModel.data[indexPath.row].id ?? ""
+            reloadList()
+            viewModel.fetchLists()
+        } else {
+            viewModel.trelloData.listID = viewModel.data[indexPath.row].id ?? ""
+            reloadList()
+            viewModel.fetchCards()
+        }
+        
+        shouldFetchLists = false
+    }
+    
+    private func reloadList() {
+        viewModel.data = []
+        tasksTable.reloadData()
     }
 }
 
-extension TrelloController {
-    @objc func refresh() {
-        
-    }
-}
 
 extension TrelloController: TrelloViewModelProtocol {
-  
+    func didUpdatePage() {
+        tasksTable.reloadData()
+    }
 }

@@ -61,7 +61,7 @@
             </objects>
             <point key="canvasLocation" x="4366.666666666667" y="-248.4375"/>
         </scene>
-        <!--TRELLO-->
+        <!--Jira Boards-->
         <scene sceneID="wLn-wO-1ea">
             <objects>
                 <viewController storyboardIdentifier="TrelloMain" id="Rj6-Dp-Bvh" customClass="TrelloController" customModule="IntergrationJira" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                                 </constraints>
                                 <color key="separatorColor" white="0.80000000000000004" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskCell" id="JWs-XK-W4s">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrelloCell" id="JWs-XK-W4s">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JWs-XK-W4s" id="c1Q-Tw-npO">
@@ -101,14 +101,14 @@
                             <constraint firstItem="Njy-Bb-a5Q" firstAttribute="top" secondItem="6tn-kz-m3C" secondAttribute="top" id="bCe-CZ-bzq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TRELLO" id="A5B-Ia-cFf"/>
+                    <navigationItem key="navigationItem" title="Jira Boards" id="A5B-Ia-cFf"/>
                     <connections>
                         <outlet property="tasksTable" destination="Njy-Bb-a5Q" id="fJ9-bv-5hW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iR9-gm-xrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4367" y="450"/>
+            <point key="canvasLocation" x="4366.666666666667" y="450"/>
         </scene>
         <!--Platform-->
         <scene sceneID="aVI-VV-sxZ">
@@ -280,6 +280,7 @@
                         <outlet property="keyField" destination="a2K-Os-p7D" id="Udi-8a-puk"/>
                         <outlet property="proceedButton" destination="utY-Ah-Js6" id="ZkP-2Z-IQY"/>
                         <outlet property="tokenField" destination="0cq-X7-UPB" id="Bfa-fX-hN0"/>
+                        <segue destination="Rj6-Dp-Bvh" kind="show" id="XgH-tL-6pc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuS-JG-Xez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
