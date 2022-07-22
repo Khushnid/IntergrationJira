@@ -7,6 +7,7 @@ class JiraUserController: UIViewController {
     @IBOutlet weak var keyTextField: UITextField!
     
     var textValues: (user: String, password: String, url: String, key: String) = ("", "", "", "")
+    let TRELLO_STORYBOARD_ID = "JiraMain"
     
     @IBOutlet weak var proceedButton: UIButton!
     
@@ -26,7 +27,7 @@ class JiraUserController: UIViewController {
     }
     
     @objc func proceedJiraScreen() {
-        let navigation = self.storyboard?.instantiateViewController(withIdentifier: "JiraMain") as! JiraController
+        let navigation = self.storyboard?.instantiateViewController(withIdentifier: TRELLO_STORYBOARD_ID) as! JiraController
         navigation.userValues = textValues
         self.navigationController?.pushViewController(navigation, animated: true)
     }

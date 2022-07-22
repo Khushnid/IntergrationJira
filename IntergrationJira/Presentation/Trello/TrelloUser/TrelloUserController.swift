@@ -4,6 +4,7 @@ class TrelloUserController: UIViewController {
     @IBOutlet weak var keyField: UITextField!
     @IBOutlet weak var tokenField: UITextField!
     @IBOutlet weak var proceedButton: UIButton!
+    let TRELLO_STORYBOARD_ID = "TrelloMain"
     
     var textValues: (key: String, token: String) = ("", "")
     
@@ -20,7 +21,7 @@ class TrelloUserController: UIViewController {
     }
     
     @objc func proceedJiraScreen() {
-        let navigation = self.storyboard?.instantiateViewController(withIdentifier: "TrelloMain") as! TrelloController
+        let navigation = self.storyboard?.instantiateViewController(withIdentifier: TRELLO_STORYBOARD_ID) as! TrelloController
         navigation.userValues = textValues
         self.navigationController?.pushViewController(navigation, animated: true)
     }

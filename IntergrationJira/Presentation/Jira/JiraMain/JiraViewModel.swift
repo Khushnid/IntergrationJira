@@ -1,4 +1,3 @@
-import Foundation
 import AtlassianHelper
 
 protocol JiraViewModelProtocol: AnyObject {

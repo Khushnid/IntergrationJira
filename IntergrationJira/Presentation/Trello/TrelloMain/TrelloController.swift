@@ -5,6 +5,7 @@ class TrelloController: UIViewController {
     
     private lazy var viewModel = TrelloViewModel(userValues: userValues)
     var userValues: (key: String, token: String) = ("", "")
+    let TRELLO_CELL_ID = "TrelloCell"
     var state: TrelloBoardState = .boards
     
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ extension TrelloController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TrelloCell") else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TRELLO_CELL_ID) else { return UITableViewCell() }
         cell.textLabel?.text = viewModel.data[indexPath.row].name
         return cell
     }

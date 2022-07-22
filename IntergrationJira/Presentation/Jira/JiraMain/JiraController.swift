@@ -6,6 +6,7 @@ class JiraController: UIViewController {
     
     var userValues: (user: String, password: String, url: String, key: String) = ("", "", "", "")
     private lazy var viewModel = JiraViewModel(userValues: userValues)
+    let JIRA_CELL_ID = "JiraCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ extension JiraController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") else { return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: JIRA_CELL_ID) else { return UITableViewCell()}
         cell.textLabel?.text = viewModel.tasks[indexPath.row].fields?.summary
         return cell
     }
