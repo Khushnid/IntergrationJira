@@ -6,7 +6,8 @@ protocol TrelloViewModelProtocol: AnyObject {
 
 class TrelloViewModel {
     weak var delegate: TrelloViewModelProtocol?
-    lazy var networkManager = DefaultTrelloManager(key: userValues.key, token: userValues.token)
+    lazy var networkManager = DefaultTrelloManager(key: userValues.key,
+                                                   token: userValues.token)
     
     var userValues: (key: String, token: String)
     var trelloData: (boardID: String, listID: String) = ("", "")
