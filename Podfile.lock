@@ -1,16 +1,20 @@
 PODS:
+  - DropDown (2.3.13)
   - Wormholy (1.6.5)
 
 DEPENDENCIES:
+  - DropDown
   - Wormholy
 
 SPEC REPOS:
   trunk:
+    - DropDown
     - Wormholy
 
 SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Wormholy: 3252bc3e55a1847ef9a0976c1377bd77bf3635fa
 
-PODFILE CHECKSUM: 52c2b864267718751a48a62ab6304a6e10306070
+PODFILE CHECKSUM: 22c7ed9e2011929ba807f2ff9b520a20b70cd44b
 
 COCOAPODS: 1.11.2

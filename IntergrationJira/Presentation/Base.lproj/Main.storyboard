@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2gf-hc-Tf7">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -63,7 +64,7 @@
         <!--TRELLO-->
         <scene sceneID="wLn-wO-1ea">
             <objects>
-                <viewController id="Rj6-Dp-Bvh" customClass="TrelloController" customModule="IntergrationJira" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrelloMain" id="Rj6-Dp-Bvh" customClass="TrelloController" customModule="IntergrationJira" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6tn-kz-m3C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,8 +87,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bXg-kh-Olt"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="z70-X3-7nP"/>
+                                    <outlet property="dataSource" destination="Rj6-Dp-Bvh" id="xYk-tb-CO9"/>
+                                    <outlet property="delegate" destination="Rj6-Dp-Bvh" id="Jl2-02-7jP"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -101,6 +102,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TRELLO" id="A5B-Ia-cFf"/>
+                    <connections>
+                        <outlet property="tasksTable" destination="Njy-Bb-a5Q" id="fJ9-bv-5hW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iR9-gm-xrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -192,6 +196,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Proceed"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="eeU-au-1dD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4ji-JT-TEH"/>
@@ -210,10 +217,9 @@
                     <connections>
                         <outlet property="keyTextField" destination="XS4-KK-jsl" id="uGW-R5-fLv"/>
                         <outlet property="passwordTextField" destination="YUS-Qv-NMV" id="KJ3-c7-O9Y"/>
-                        <outlet property="proceedButton" destination="7Nu-C9-ZYe" id="hIn-PK-Hk0"/>
+                        <outlet property="proceedButton" destination="7Nu-C9-ZYe" id="gIU-qs-BTY"/>
                         <outlet property="urlTextField" destination="qHD-Ry-Odr" id="BeJ-Vb-JIX"/>
                         <outlet property="userTextField" destination="9hq-3X-b8X" id="swk-bo-eJK"/>
-                        <segue destination="BYZ-38-t0r" kind="show" id="dQX-lN-cVF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuA-Ao-HkW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -229,9 +235,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1aK-HY-WYb">
-                                <rect key="frame" x="20" y="290" width="374" height="236"/>
+                                <rect key="frame" x="20" y="354" width="374" height="108"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2K-Os-p7D">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Jira Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2K-Os-p7D">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Mq8-TK-M22"/>
@@ -239,7 +245,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cq-X7-UPB">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Jira Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cq-X7-UPB">
                                         <rect key="frame" x="0.0" y="64" width="374" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="wF4-6y-e7F"/>
@@ -247,34 +253,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DwM-VY-9XF">
-                                        <rect key="frame" x="0.0" y="128" width="374" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="f1e-Hm-ySv"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Key(Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ex-y7-P2W">
-                                        <rect key="frame" x="0.0" y="192" width="374" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="Wtc-eg-Nyv"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utY-Ah-Js6">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utY-Ah-Js6">
                                 <rect key="frame" x="20" y="798" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="aAe-K0-Tfy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Proceed"/>
-                                <connections>
-                                    <segue destination="Rj6-Dp-Bvh" kind="show" id="H8L-Fb-na2"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4pk-Ea-pbE"/>
@@ -289,10 +276,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="User Info" id="DYc-O0-iTK"/>
+                    <connections>
+                        <outlet property="keyField" destination="a2K-Os-p7D" id="Udi-8a-puk"/>
+                        <outlet property="proceedButton" destination="utY-Ah-Js6" id="ZkP-2Z-IQY"/>
+                        <outlet property="tokenField" destination="0cq-X7-UPB" id="Bfa-fX-hN0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuS-JG-Xez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3448" y="450"/>
+            <point key="canvasLocation" x="3447.826086956522" y="450"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fbC-9v-oQ6">

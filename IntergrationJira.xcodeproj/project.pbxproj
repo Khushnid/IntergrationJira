@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2161135D28888FA300D9D56D /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161135C28888FA300D9D56D /* String+Helpers.swift */; };
+		210965EF288ADC2700887D04 /* TrelloViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210965EE288ADC2700887D04 /* TrelloViewModel.swift */; };
+		210965F4288AF53E00887D04 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210965F3288AF53E00887D04 /* DropDown.swift */; };
+		210965F8288AF59B00887D04 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210965F6288AF59B00887D04 /* NiblessView.swift */; };
+		210965F9288AF59B00887D04 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210965F7288AF59B00887D04 /* RootView.swift */; };
+		2161135D28888FA300D9D56D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161135C28888FA300D9D56D /* String+Extensions.swift */; };
 		218ECAC528843D0F00E0A7CA /* JiraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */; };
 		218FBFFA288177D600365883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFF9288177D600365883 /* AppDelegate.swift */; };
 		218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218FBFFB288177D600365883 /* SceneDelegate.swift */; };
@@ -24,7 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2161135C28888FA300D9D56D /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
+		210965EE288ADC2700887D04 /* TrelloViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrelloViewModel.swift; sourceTree = "<group>"; };
+		210965F3288AF53E00887D04 /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
+		210965F6288AF59B00887D04 /* NiblessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
+		210965F7288AF59B00887D04 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		2161135C28888FA300D9D56D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		218ECAC428843D0F00E0A7CA /* JiraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiraViewModel.swift; sourceTree = "<group>"; };
 		218FBFF6288177D600365883 /* IntergrationJira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntergrationJira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218FBFF9288177D600365883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,10 +64,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		210965F0288AF50700887D04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2161135C28888FA300D9D56D /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		210965F2288AF52D00887D04 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				218FC004288177D700365883 /* LaunchScreen.storyboard */,
+				218FC002288177D700365883 /* Assets.xcassets */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		210965F5288AF59B00887D04 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				210965F6288AF59B00887D04 /* NiblessView.swift */,
+				210965F7288AF59B00887D04 /* RootView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		2161135B28888F9500D9D56D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				2161135C28888FA300D9D56D /* String+Helpers.swift */,
+				210965F5288AF59B00887D04 /* Core */,
+				210965F3288AF53E00887D04 /* DropDown.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -116,9 +151,9 @@
 		218FC0102883122C00365883 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				210965F2288AF52D00887D04 /* Main */,
 				2161135B28888F9500D9D56D /* Helpers */,
-				218FC004288177D700365883 /* LaunchScreen.storyboard */,
-				218FC002288177D700365883 /* Assets.xcassets */,
+				210965F0288AF50700887D04 /* Extensions */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -146,6 +181,7 @@
 			children = (
 				21B370CC28887CD200A72B40 /* TrelloUserController.swift */,
 				21B370D228887D2500A72B40 /* TrelloController.swift */,
+				210965EE288ADC2700887D04 /* TrelloViewModel.swift */,
 			);
 			path = Trello;
 			sourceTree = "<group>";
@@ -291,11 +327,15 @@
 				21B370CD28887CD200A72B40 /* TrelloUserController.swift in Sources */,
 				21B370C92888799100A72B40 /* IntroViewController.swift in Sources */,
 				218FBFFE288177D600365883 /* JiraController.swift in Sources */,
+				210965F8288AF59B00887D04 /* NiblessView.swift in Sources */,
 				21B370CF28887CE300A72B40 /* JiraUserController.swift in Sources */,
 				218ECAC528843D0F00E0A7CA /* JiraViewModel.swift in Sources */,
-				2161135D28888FA300D9D56D /* String+Helpers.swift in Sources */,
+				2161135D28888FA300D9D56D /* String+Extensions.swift in Sources */,
 				218FBFFA288177D600365883 /* AppDelegate.swift in Sources */,
 				218FBFFC288177D600365883 /* SceneDelegate.swift in Sources */,
+				210965F9288AF59B00887D04 /* RootView.swift in Sources */,
+				210965EF288ADC2700887D04 /* TrelloViewModel.swift in Sources */,
+				210965F4288AF53E00887D04 /* DropDown.swift in Sources */,
 				21B370D328887D2500A72B40 /* TrelloController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +492,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +522,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

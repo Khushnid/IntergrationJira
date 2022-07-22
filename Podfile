@@ -7,5 +7,6 @@ target 'IntergrationJira' do
 
   # Pods for IntergrationJira
   pod 'Wormholy', :configurations => ['Debug']
+  pod 'DropDown'
 
 end

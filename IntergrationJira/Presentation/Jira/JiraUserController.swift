@@ -56,7 +56,7 @@ extension JiraUserController: UITextFieldDelegate {
     private func buttonStatusSpy() {
         if textValues.user != "" && textValues.user.count > 8
             && textValues.password != "" && textValues.password.count > 8
-            && verifyUrl(urlString: textValues.url) {
+            && textValues.url.isValidUrl {
             proceedButton.isEnabled = true
         } else {
             proceedButton.isEnabled = false
@@ -65,7 +65,7 @@ extension JiraUserController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true;
+        return true
     }
 }
 
