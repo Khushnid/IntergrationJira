@@ -61,7 +61,7 @@
             </objects>
             <point key="canvasLocation" x="4366.666666666667" y="-248.4375"/>
         </scene>
-        <!--Jira Boards-->
+        <!--Trello Boards-->
         <scene sceneID="wLn-wO-1ea">
             <objects>
                 <viewController storyboardIdentifier="TrelloMain" id="Rj6-Dp-Bvh" customClass="TrelloController" customModule="IntergrationJira" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +101,7 @@
                             <constraint firstItem="Njy-Bb-a5Q" firstAttribute="top" secondItem="6tn-kz-m3C" secondAttribute="top" id="bCe-CZ-bzq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Jira Boards" id="A5B-Ia-cFf"/>
+                    <navigationItem key="navigationItem" title="Trello Boards" id="A5B-Ia-cFf"/>
                     <connections>
                         <outlet property="tasksTable" destination="Njy-Bb-a5Q" id="fJ9-bv-5hW"/>
                     </connections>
@@ -237,7 +237,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1aK-HY-WYb">
                                 <rect key="frame" x="20" y="354" width="374" height="108"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Jira Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2K-Os-p7D">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trello Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2K-Os-p7D">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Mq8-TK-M22"/>
@@ -245,7 +245,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Jira Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cq-X7-UPB">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trello Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cq-X7-UPB">
                                         <rect key="frame" x="0.0" y="64" width="374" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="wF4-6y-e7F"/>
